@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>grace speak</title>
+		<script src="./dist/index.iife.js"></script>
+	</head>
+	<body>
+		<h1>grace speak</h1>
+		<script>
+			const Speaker = window.GraceSpeak
+			const speaker = new Speaker()
+
+			speaker.speak('888')
+			setTimeout(() => {
+				speaker.speak('牛逼')
+				speaker.speak('11')
+				speaker.speak('22')
+				speaker.speak('33')
+				speaker.speak('44')
+			}, 2000)
+		</script>
+	</body>
+</html>

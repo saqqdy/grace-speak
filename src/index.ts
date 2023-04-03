@@ -1,24 +1,6 @@
 import { extend } from 'js-cool'
 import { inBrowser, isChrome } from './utils'
 
-// ;(this as any).graceSpeakReady = false
-// ;(() => {
-// 	if (!inBrowser) return
-// 	if (typeof window.speechSynthesis === 'undefined') {
-// 		console.error('speechSynthesis is not supported')
-// 		return
-// 	}
-
-// 	const handler = () => {
-// 		speech.speak(new SpeechSynthesisUtterance(''))
-// 		;(this as any).graceSpeakReady = speech.speaking || speech.pending
-// 		window.removeEventListener('click', handler)
-// 		window.removeEventListener('keypress', handler)
-// 	}
-// 	window.addEventListener('click', handler)
-// 	window.addEventListener('keypress', handler)
-// })()
-
 declare global {
 	interface Window {
 		graceSpeakReady: boolean
@@ -83,32 +65,35 @@ class Speaker {
 
 		this.options = extend(true, this.options, options) as unknown as SpeechOptions
 
-		!this.voice && this.initVoice()
-		!this.ready && this.init()
+		const promises = []
+		!this.ready && promises.push(this.init())
+		!this.voice && promises.push(this.getVoice())
+		Promise.all(promises).then(() => {
+			this.speaking()
+		})
 	}
 
-	private initVoice() {
-		// voiceschanged
-		const handler = () => {
-			this.voice = this.getVoice()
-			this.speech.removeEventListener('voiceschanged', handler)
-		}
-		this.speech.addEventListener('voiceschanged', handler)
-	}
-
-	private init() {
+	/**
+	 * init
+	 */
+	private async init() {
 		if (!isChrome) {
 			this.ready = window.graceSpeakReady = true
-			return
+			return Promise.resolve(true)
 		}
-		const handler = () => {
-			this.speech.speak(new SpeechSynthesisUtterance(''))
-			this.ready = window.graceSpeakReady = this.speech.speaking || this.speech.pending
-			window.removeEventListener('click', handler)
-			window.removeEventListener('keypress', handler)
-		}
-		window.addEventListener('click', handler)
-		window.addEventListener('keypress', handler)
+
+		return new Promise((resolve, reject) => {
+			const handler = () => {
+				this.speech.speak(new SpeechSynthesisUtterance(''))
+				this.ready = window.graceSpeakReady = this.speech.speaking || this.speech.pending
+				window.removeEventListener('click', handler)
+				window.removeEventListener('keypress', handler)
+				if (this.ready) resolve(true)
+				else reject(new Error('init error'))
+			}
+			window.addEventListener('click', handler)
+			window.addEventListener('keypress', handler)
+		})
 	}
 
 	/**
@@ -116,10 +101,18 @@ class Speaker {
 	 *
 	 * @returns result voice: SpeechSynthesisVoice
 	 */
-	public getVoice(): SpeechSynthesisVoice | undefined {
+	public async getVoice(): Promise<SpeechSynthesisVoice | undefined> {
 		if (this.voice) return this.voice
 
-		const list = this.speech.getVoices().sort((a, b) => {
+		let voices = this.speech.getVoices()
+		if (!voices || !voices.length) {
+			await new Promise(resolve =>
+				this.speech.addEventListener('voiceschanged', resolve, { once: true })
+			)
+			voices = this.speech.getVoices()
+		}
+
+		voices = voices.sort((a, b) => {
 			const nameA = a.name.toUpperCase()
 			const nameB = b.name.toUpperCase()
 			if (nameA < nameB) return -1
@@ -127,11 +120,11 @@ class Speaker {
 			return 1
 		})
 
-		if (this.options.voiceFilter) return list.find(this.options.voiceFilter)
-		return (
-			list.find(({ lang, localService }) => localService && lang === this.options.lang) ||
-			list.find(({ lang }) => lang === this.options.lang)
-		)
+		this.voice = this.options.voiceFilter
+			? voices.find(this.options.voiceFilter)
+			: voices.find(({ lang, localService }) => localService && lang === this.options.lang) ||
+			  voices.find(({ lang }) => lang === this.options.lang)
+		return this.voice
 	}
 
 	/**
@@ -159,7 +152,30 @@ class Speaker {
 		}
 		this.effects = ([] as Effect[]).concat(this.effects, effect)
 
+		this.speaking()
+
 		return effect.key
+	}
+
+	/**
+	 * do speaking
+	 */
+	speaking() {
+		if (!this.ready || !this.voice) return
+		for (const { content, utterOptions } of this.effects) {
+			this.utter = new SpeechSynthesisUtterance(content)
+			let action: keyof UtterOptions
+			for (action in utterOptions) {
+				this.utter[action] = utterOptions[action] as never
+			}
+			this.utter.voice = this.voice
+			this.utter.pitch = this.options.pitch
+			this.utter.rate = this.options.rate
+			this.utter.volume = this.options.volume
+			this.speech.speak(this.utter)
+		}
+		this.effects = []
+		this.utter = null
 	}
 
 	/**
@@ -201,4 +217,4 @@ class Speaker {
 	}
 }
 
-export { Speaker, Speaker as default }
+export { Speaker as default }

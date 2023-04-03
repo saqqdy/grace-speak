@@ -1,44 +1,48 @@
 {
 	"name": "grace-speak",
 	"description": "A composition api for SpeechSynthesis",
-	"version": "1.0.0-alpha.1",
+	"version": "1.0.0-beta.1",
 	"packageManager": "pnpm@7.30.3",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.mjs",
+	"browser": {
+		"dist/index.js": "dist/index.min.js",
+		"dist/es5/index.js": "dist/es5/index.min.js"
+	},
 	"unpkg": "./dist/index.min.js",
-	"jsdelivr": "./dist/index.min.js",
-	"typings": "./dist/index.d.ts",
+	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
+			"types": "./dist/index.d.ts",
 			"require": "./dist/index.cjs",
 			"import": "./dist/index.mjs"
 		},
 		"./*": "./*"
 	},
-	"files": [
-		"dist",
-		"es",
-		"lib"
-	],
 	"directories": {
-		"dist": "dist",
-		"es": "es",
 		"lib": "lib",
+		"dist": "dist",
 		"src": "src"
 	},
+	"files": [
+		"lib",
+		"dist",
+		"typings"
+	],
 	"scripts": {
-		"build": "run-s clean build:{bundle,types,docs} roll-types",
+		"build": "run-s clean build:{bundle,es5,types,docs} roll-types",
 		"build:bundle": "rollup -c build/rollup.config.ts --configPlugin @rollup/plugin-typescript",
-		"build:types": "tsc --emitDeclarationOnly --outDir temp -p src",
+		"build:es5": "cross-env BABEL_ENV=es5 pnpm build:bundle",
+		"build:types": "tsc -p src/tsconfig.declaration.json",
 		"build:docs": "rm-all docs && typedoc && prettier --write \"**/*.md\"",
-		"roll-types": "api-extractor run && rm-all temp",
+		"roll-types": "api-extractor run && rm-all temp && cp dist/index.d.ts dist/es5",
 		"watch": "pnpm build:bundle -w",
 		"pub": "tscjs scripts/publish",
 		"unpub": "tscjs scripts/unpublish",
 		"sync": "tscjs scripts/sync",
 		"workflow:publish-test": "zx scripts/workflow.mjs",
-		"clean": "rm-all dist",
-		"dist": "run-s clean build",
+		"clean": "rm-all dist es lib",
+		"dist": "run-s eslint prettier build",
 		"test-unit": "jest --filter ./scripts/filter-unit.js",
 		"jest": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --coverage",
 		"coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
@@ -49,9 +53,9 @@
 		"js-cool": "^3.0.0-beta.6"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.21.3",
-		"@babel/preset-env": "^7.20.2",
-		"@babel/preset-typescript": "^7.21.0",
+		"@babel/core": "^7.21.4",
+		"@babel/preset-env": "^7.21.4",
+		"@babel/preset-typescript": "^7.21.4",
 		"@eslint-sets/eslint-config-ts": "^5.0.2",
 		"@microsoft/api-extractor": "^7.34.4",
 		"@rollup/plugin-alias": "^4.0.3",
@@ -76,13 +80,14 @@
 		"reinstaller": "^2.3.0",
 		"rm-all": "^1.0.0",
 		"rollup": "^3.20.2",
+		"rollup-plugin-cleanup": "^3.2.1",
 		"rollup-plugin-filesize": "^10.0.0",
 		"rollup-plugin-visualizer": "^5.9.0",
-		"ts-jest": "^29.0.5",
+		"ts-jest": "^29.1.0",
 		"tsnd": "^1.1.0",
 		"typedoc": "^0.23.28",
 		"typedoc-plugin-markdown": "^3.14.0",
-		"typescript": "^5.0.2",
+		"typescript": "^5.0.3",
 		"zx": "^7.2.1"
 	},
 	"peerDependencies": {
