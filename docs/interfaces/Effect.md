@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[index.ts:40](https://github.com/saqqdy/grace-speak/blob/1587ea2/src/index.ts#L40)
+[index.ts:40](https://github.com/saqqdy/grace-speak/blob/90a7f01/src/index.ts#L40)
 
 ---
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[index.ts:39](https://github.com/saqqdy/grace-speak/blob/1587ea2/src/index.ts#L39)
+[index.ts:39](https://github.com/saqqdy/grace-speak/blob/90a7f01/src/index.ts#L39)
 
 ---
 
@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[index.ts:41](https://github.com/saqqdy/grace-speak/blob/1587ea2/src/index.ts#L41)
+[index.ts:41](https://github.com/saqqdy/grace-speak/blob/90a7f01/src/index.ts#L41)

@@ -25,4 +25,4 @@
 
 #### Defined in
 
-[index.ts:19](https://github.com/saqqdy/grace-speak/blob/1587ea2/src/index.ts#L19)
+[index.ts:19](https://github.com/saqqdy/grace-speak/blob/90a7f01/src/index.ts#L19)
