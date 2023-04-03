@@ -11,7 +11,6 @@ import { visualizer } from 'rollup-plugin-visualizer'
 import pkg from '../package.json' assert { type: 'json' }
 import { banner, extensions, reporter } from './config'
 
-const externals = [...Object.keys(pkg.dependencies || {})]
 const nodeResolver = nodeResolve({
 	// Use the `package.json` "browser" field
 	browser: false,
@@ -34,14 +33,14 @@ const options: RollupOptions = {
 			]
 		}),
 		nodeResolver,
-		commonjs({
-			sourceMap: false,
-			exclude: ['core-js']
-		}),
 		babel({
 			babelHelpers: 'bundled',
 			extensions,
-			exclude: ['node_modules']
+			exclude: [/node_modules[\\/]core-js/]
+		}),
+		commonjs({
+			sourceMap: false,
+			exclude: ['core-js']
 		}),
 		typescript({
 			compilerOptions: {
@@ -57,32 +56,54 @@ const options: RollupOptions = {
 }
 
 function externalCjsEsm(id: string) {
-	return ['core-js', '@babel/runtime'].concat(externals).some(k => new RegExp('^' + k).test(id))
+	return ['core-js', '@babel/runtime'].some(k => new RegExp('^' + k).test(id))
 }
 
 const distDir = (path: string) =>
 	process.env.BABEL_ENV === 'es5' ? path.replace('index', 'es5/index') : path
 
-export default [
-	{
-		input: 'src/index.ts',
-		output: [
+export default (process.env.BABEL_ENV !== 'es5'
+	? ([
 			{
-				file: distDir(pkg.main),
-				exports: 'auto',
-				format: 'cjs'
-			},
-			{
-				file: distDir(pkg.module),
-				exports: 'auto',
-				format: 'es'
+				input: 'src/index.ts',
+				output: [
+					{
+						file: pkg.main,
+						exports: 'auto',
+						format: 'cjs'
+					},
+					{
+						file: pkg.module,
+						exports: 'auto',
+						format: 'es'
+					}
+				],
+				external: externalCjsEsm,
+				...options
 			}
-		],
-		external: externalCjsEsm,
-		...options
-	},
+	  ] as RollupOptions[])
+	: ([
+			{
+				input: pkg.module,
+				output: [
+					{
+						file: distDir(pkg.main),
+						exports: 'auto',
+						format: 'cjs'
+					},
+					{
+						file: distDir(pkg.module),
+						exports: 'auto',
+						format: 'es'
+					}
+				],
+				external: externalCjsEsm,
+				...options
+			}
+	  ] as RollupOptions[])
+).concat([
 	{
-		input: distDir('dist/index.mjs'),
+		input: distDir(pkg.main),
 		output: [
 			{
 				file: distDir('dist/index.iife.js'),
@@ -115,4 +136,4 @@ export default [
 			visualizer()
 		]
 	}
-]
+])

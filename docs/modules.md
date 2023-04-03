@@ -1,6 +1,6 @@
-[index.md - v1.0.0-beta.1](README.md) / Exports
+[index.md - v1.0.0-beta.2](README.md) / Exports
 
-# index.md - v1.0.0-beta.1
+# index.md - v1.0.0-beta.2
 
 ## Table of contents
 
@@ -25,4 +25,4 @@
 
 #### Defined in
 
-[index.ts:19](https://github.com/saqqdy/grace-speak/blob/90a7f01/src/index.ts#L19)
+[index.ts:19](https://github.com/saqqdy/grace-speak/blob/bdf95b3/src/index.ts#L19)
