@@ -1,4 +1,4 @@
-[index.md - v1.0.0-beta.2](../README.md) / [Exports](../modules.md) / Effect
+[index.md - v1.0.0](../README.md) / [Exports](../modules.md) / Effect
 
 # Interface: Effect
 
@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[index.ts:40](https://github.com/saqqdy/grace-speak/blob/bdf95b3/src/index.ts#L40)
+[index.ts:40](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L40)
 
 ---
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[index.ts:39](https://github.com/saqqdy/grace-speak/blob/bdf95b3/src/index.ts#L39)
+[index.ts:39](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L39)
 
 ---
 
@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[index.ts:41](https://github.com/saqqdy/grace-speak/blob/bdf95b3/src/index.ts#L41)
+[index.ts:41](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L41)
