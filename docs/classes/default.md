@@ -1,4 +1,4 @@
-[index.md - v1.0.0](../README.md) / [Exports](../modules.md) / default
+[index.md - v1.1.0](../README.md) / [Exports](../modules.md) / default
 
 # Class: default
 
@@ -33,17 +33,17 @@
 
 ### constructor
 
-• **new default**(`options`)
+• **new default**(`options?`)
 
 #### Parameters
 
-| Name      | Type                                              |
-| :-------- | :------------------------------------------------ |
-| `options` | [`SpeechOptions`](../interfaces/SpeechOptions.md) |
+| Name      | Type                                                          |
+| :-------- | :------------------------------------------------------------ |
+| `options` | `Partial`<[`SpeechOptions`](../interfaces/SpeechOptions.md)\> |
 
 #### Defined in
 
-[index.ts:59](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L59)
+[index.ts:59](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L59)
 
 ## Properties
 
@@ -53,7 +53,7 @@
 
 #### Defined in
 
-[index.ts:46](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L46)
+[index.ts:46](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L46)
 
 ---
 
@@ -63,7 +63,7 @@
 
 #### Defined in
 
-[index.ts:50](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L50)
+[index.ts:50](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L50)
 
 ---
 
@@ -73,7 +73,7 @@
 
 #### Defined in
 
-[index.ts:49](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L49)
+[index.ts:49](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L49)
 
 ---
 
@@ -83,7 +83,7 @@
 
 #### Defined in
 
-[index.ts:45](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L45)
+[index.ts:45](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L45)
 
 ---
 
@@ -93,7 +93,7 @@
 
 #### Defined in
 
-[index.ts:47](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L47)
+[index.ts:47](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L47)
 
 ---
 
@@ -103,7 +103,7 @@
 
 #### Defined in
 
-[index.ts:48](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L48)
+[index.ts:48](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L48)
 
 ## Methods
 
@@ -119,7 +119,7 @@ Forced cancellation of all broadcasts, and immediate cancellation of those being
 
 #### Defined in
 
-[index.ts:201](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L201)
+[index.ts:199](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L199)
 
 ---
 
@@ -137,7 +137,7 @@ result - utter: SpeechSynthesisUtterance
 
 #### Defined in
 
-[index.ts:135](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L135)
+[index.ts:135](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L135)
 
 ---
 
@@ -155,7 +155,7 @@ result voice: SpeechSynthesisVoice
 
 #### Defined in
 
-[index.ts:104](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L104)
+[index.ts:104](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L104)
 
 ---
 
@@ -171,7 +171,7 @@ init
 
 #### Defined in
 
-[index.ts:79](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L79)
+[index.ts:79](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L79)
 
 ---
 
@@ -187,7 +187,7 @@ Suspension of all broadcasts and immediate cancellation of those being broadcast
 
 #### Defined in
 
-[index.ts:208](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L208)
+[index.ts:206](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L206)
 
 ---
 
@@ -211,7 +211,7 @@ result - cancellation result true=Cancellation success false=Broadcast content n
 
 #### Defined in
 
-[index.ts:187](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L187)
+[index.ts:187](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L187)
 
 ---
 
@@ -227,7 +227,7 @@ Resume all broadcasts and immediately cancel those being broadcast
 
 #### Defined in
 
-[index.ts:215](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L215)
+[index.ts:213](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L213)
 
 ---
 
@@ -252,7 +252,7 @@ result - effectKey: symbol
 
 #### Defined in
 
-[index.ts:147](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L147)
+[index.ts:147](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L147)
 
 ---
 
@@ -268,4 +268,4 @@ do speaking
 
 #### Defined in
 
-[index.ts:163](https://github.com/saqqdy/grace-speak/blob/2d4236c/src/index.ts#L163)
+[index.ts:163](https://github.com/saqqdy/grace-speak/blob/b318942/src/index.ts#L163)

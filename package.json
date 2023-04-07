@@ -1,7 +1,7 @@
 {
 	"name": "grace-speak",
 	"description": "A composition api for SpeechSynthesis",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"packageManager": "pnpm@7.30.3",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.mjs",
@@ -50,24 +50,25 @@
 		"prettier": "prettier --write \"**/*.{js,ts,jsx,tsx,yml,json,md}\""
 	},
 	"dependencies": {
-		"js-cool": "^3.0.0-beta.6"
+		"js-cool": "^3.1.0",
+		"tslib": "^2.5.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.21.4",
 		"@babel/preset-env": "^7.21.4",
 		"@babel/preset-typescript": "^7.21.4",
-		"@eslint-sets/eslint-config-ts": "^5.0.2",
+		"@eslint-sets/eslint-config-ts": "^5.1.0",
 		"@microsoft/api-extractor": "^7.34.4",
-		"@rollup/plugin-alias": "^4.0.3",
+		"@rollup/plugin-alias": "^5.0.0",
 		"@rollup/plugin-babel": "^6.0.3",
 		"@rollup/plugin-commonjs": "^24.0.1",
-		"@rollup/plugin-node-resolve": "^15.0.1",
+		"@rollup/plugin-node-resolve": "^15.0.2",
 		"@rollup/plugin-terser": "^0.4.0",
-		"@rollup/plugin-typescript": "^11.0.0",
+		"@rollup/plugin-typescript": "^11.1.0",
 		"@types/jest": "^29.5.0",
 		"@types/node": "^18.15.11",
 		"chalk": "^5.2.0",
-		"core-js": "^3.29.1",
+		"core-js": "^3.30.0",
 		"coveralls": "^3.1.1",
 		"cross-env": "^7.0.3",
 		"eslint": "^8.37.0",
@@ -91,7 +92,8 @@
 		"zx": "^7.2.1"
 	},
 	"peerDependencies": {
-		"core-js": ">= 3"
+		"core-js": ">= 3",
+		"js-cool": ">= 2"
 	},
 	"engines": {
 		"node": ">=12.20"

@@ -56,7 +56,7 @@ class Speaker {
 		volume: 1
 	}
 
-	constructor(options: SpeechOptions) {
+	constructor(options: Partial<SpeechOptions> = {}) {
 		if (!inBrowser) return
 		if (typeof window.speechSynthesis === 'undefined') {
 			console.error('speechSynthesis is not supported')
@@ -150,7 +150,7 @@ class Speaker {
 			content,
 			utterOptions
 		}
-		this.effects = ([] as Effect[]).concat(this.effects, effect)
+		this.effects.push(effect)
 
 		this.speaking()
 
@@ -185,11 +185,9 @@ class Speaker {
 	 * @returns result - cancellation result true=Cancellation success false=Broadcast content not found or broadcast consumed
 	 */
 	public remove(effectKey: Effect['key']): boolean {
-		const _effects = ([] as Effect[]).concat(this.effects)
-		const index = _effects.findIndex(({ key }) => key === effectKey)
+		const index = this.effects.findIndex(({ key }) => key === effectKey)
 		if (index > -1) {
-			_effects.splice(index, 1)
-			this.effects = _effects
+			this.effects.splice(index, 1)
 			return true
 		}
 		return false

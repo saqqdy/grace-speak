@@ -1,3 +1,4 @@
+import { sep } from 'node:path'
 import type { RollupOptions } from 'rollup'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import babel from '@rollup/plugin-babel'
@@ -56,54 +57,34 @@ const options: RollupOptions = {
 }
 
 function externalCjsEsm(id: string) {
-	return ['core-js', '@babel/runtime'].some(k => new RegExp('^' + k).test(id))
+	return ['js-cool', 'tslib', 'core-js', '@babel/runtime'].some(
+		k => id === k || new RegExp('^' + k + sep).test(id)
+	)
 }
 
 const distDir = (path: string) =>
 	process.env.BABEL_ENV === 'es5' ? path.replace('index', 'es5/index') : path
 
-export default (process.env.BABEL_ENV !== 'es5'
-	? ([
-			{
-				input: 'src/index.ts',
-				output: [
-					{
-						file: pkg.main,
-						exports: 'auto',
-						format: 'cjs'
-					},
-					{
-						file: pkg.module,
-						exports: 'auto',
-						format: 'es'
-					}
-				],
-				external: externalCjsEsm,
-				...options
-			}
-	  ] as RollupOptions[])
-	: ([
-			{
-				input: pkg.module,
-				output: [
-					{
-						file: distDir(pkg.main),
-						exports: 'auto',
-						format: 'cjs'
-					},
-					{
-						file: distDir(pkg.module),
-						exports: 'auto',
-						format: 'es'
-					}
-				],
-				external: externalCjsEsm,
-				...options
-			}
-	  ] as RollupOptions[])
-).concat([
+export default [
 	{
-		input: distDir(pkg.main),
+		input: 'src/index.ts',
+		output: [
+			{
+				file: distDir(pkg.main),
+				exports: 'auto',
+				format: 'cjs'
+			},
+			{
+				file: distDir(pkg.module),
+				exports: 'auto',
+				format: 'es'
+			}
+		],
+		external: externalCjsEsm,
+		...options
+	},
+	{
+		input: distDir(pkg.module),
 		output: [
 			{
 				file: distDir('dist/index.iife.js'),
@@ -136,4 +117,4 @@ export default (process.env.BABEL_ENV !== 'es5'
 			visualizer()
 		]
 	}
-])
+]
