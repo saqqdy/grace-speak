@@ -49,15 +49,14 @@ speaker.speak('powered by saqqdy<https://github.com/saqqdy>')
 2. Using unpkg CDN:
 
 ```html
+<!-- grace-speak < v2.0.0 -->
 <!-- for modern browser -->
-<head>
-  <script src="https://unpkg.com/grace-speak/dist/index.min.js"></script>
-</head>
-
+<script src="https://unpkg.com/grace-speak@1.1.0/dist/index.min.js"></script>
 <!-- for ie11 and blow -->
-<head>
-  <script src="https://unpkg.com/grace-speak/dist/es5/index.min.js"></script>
-</head>
+<script src="https://unpkg.com/grace-speak@1.1.0/dist/es5/index.min.js"></script>
+
+<!-- grace-speak >= v2.0.0 -->
+<script src="https://unpkg.com/grace-speak@2.0.0/dist/index.global.prod.js"></script>
 ```
 
 ## Support & Issues
