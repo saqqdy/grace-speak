@@ -1,4 +1,3 @@
-import { extend } from 'js-cool'
 import { inBrowser, isChrome } from './utils'
 
 declare global {
@@ -63,7 +62,7 @@ class Speaker {
 			return
 		}
 
-		this.options = extend(true, this.options, options) as unknown as SpeechOptions
+		this.options = Object.assign(this.options, options) as unknown as SpeechOptions
 
 		const promises = []
 		!this.ready && promises.push(this.init())

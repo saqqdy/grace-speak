@@ -1,5 +1,10 @@
 # Change logs
 
+## 2023.05.25 v2.0.1
+
+1. drop extend method
+2. upgrade js-cool
+
 ## 2023.05.22 v2.0.0
 
 1. new outputs

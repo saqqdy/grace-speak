@@ -87,9 +87,9 @@ function createEntry(config: Config) {
 	const isGlobalBuild = config.format === 'iife'
 	const isTypeScript = config.input.endsWith('.ts')
 	const isTranspiled =
-		config.file.endsWith('bundler.js') ||
-		config.file.endsWith('browser.js') ||
-		config.file.endsWith('prod.js')
+		config.input.endsWith('bundler.js') ||
+		config.input.endsWith('browser.js') ||
+		config.input.endsWith('prod.js')
 
 	const _config: Options = {
 		external: [],
