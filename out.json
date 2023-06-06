@@ -1,0 +1,1656 @@
+{
+	"id": 0,
+	"name": "index.md",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 16,
+			"name": "default",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"children": [
+				{
+					"id": 17,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 59,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L59"
+						}
+					],
+					"signatures": [
+						{
+							"id": 18,
+							"name": "new default",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 59,
+									"character": 1,
+									"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L59"
+								}
+							],
+							"parameters": [
+								{
+									"id": 19,
+									"name": "options",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Partial"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 1,
+												"name": "SpeechOptions",
+												"package": "grace-speak"
+											}
+										],
+										"name": "Partial",
+										"package": "typescript"
+									},
+									"defaultValue": "{}"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 16,
+								"name": "Speaker",
+								"package": "grace-speak"
+							}
+						}
+					]
+				},
+				{
+					"id": 21,
+					"name": "effects",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 46,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L46"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"target": 12,
+							"name": "Effect",
+							"package": "grace-speak"
+						}
+					},
+					"defaultValue": "[]"
+				},
+				{
+					"id": 25,
+					"name": "options",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 50,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L50"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 1,
+						"name": "SpeechOptions",
+						"package": "grace-speak"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 24,
+					"name": "ready",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 49,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L49"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 20,
+					"name": "speech",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 45,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L45"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+							"qualifiedName": "SpeechSynthesis"
+						},
+						"name": "SpeechSynthesis",
+						"package": "typescript"
+					},
+					"defaultValue": "window.speechSynthesis"
+				},
+				{
+					"id": 22,
+					"name": "utter",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 47,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L47"
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": null
+							},
+							{
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+									"qualifiedName": "SpeechSynthesisUtterance"
+								},
+								"name": "SpeechSynthesisUtterance",
+								"package": "typescript"
+							}
+						]
+					},
+					"defaultValue": "null"
+				},
+				{
+					"id": 23,
+					"name": "voice",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 48,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L48"
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "undefined"
+							},
+							{
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+									"qualifiedName": "SpeechSynthesisVoice"
+								},
+								"name": "SpeechSynthesisVoice",
+								"package": "typescript"
+							}
+						]
+					},
+					"defaultValue": "undefined"
+				},
+				{
+					"id": 41,
+					"name": "cancel",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 200,
+							"character": 8,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L200"
+						}
+					],
+					"signatures": [
+						{
+							"id": 42,
+							"name": "cancel",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Forced cancellation of all broadcasts, and immediate cancellation of those being broadcast"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 200,
+									"character": 1,
+									"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L200"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 30,
+					"name": "getCurrentUtter",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 136,
+							"character": 8,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L136"
+						}
+					],
+					"signatures": [
+						{
+							"id": 31,
+							"name": "getCurrentUtter",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "get current utter"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "result - utter: SpeechSynthesisUtterance"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 136,
+									"character": 1,
+									"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L136"
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "SpeechSynthesisUtterance"
+										},
+										"name": "SpeechSynthesisUtterance",
+										"package": "typescript"
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": 28,
+					"name": "getVoice",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 105,
+							"character": 14,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L105"
+						}
+					],
+					"signatures": [
+						{
+							"id": 29,
+							"name": "getVoice",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "get voice"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "result voice: SpeechSynthesisVoice"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 105,
+									"character": 1,
+									"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L105"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											},
+											{
+												"type": "reference",
+												"target": {
+													"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+													"qualifiedName": "SpeechSynthesisVoice"
+												},
+												"name": "SpeechSynthesisVoice",
+												"package": "typescript"
+											}
+										]
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 26,
+					"name": "init",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPrivate": true
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 79,
+							"character": 15,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L79"
+						}
+					],
+					"signatures": [
+						{
+							"id": 27,
+							"name": "init",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "init"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 79,
+									"character": 1,
+									"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L79"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 43,
+					"name": "pause",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 207,
+							"character": 8,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L207"
+						}
+					],
+					"signatures": [
+						{
+							"id": 44,
+							"name": "pause",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Suspension of all broadcasts and immediate cancellation of those being broadcast"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 207,
+									"character": 1,
+									"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L207"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 38,
+					"name": "remove",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 188,
+							"character": 8,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L188"
+						}
+					],
+					"signatures": [
+						{
+							"id": 39,
+							"name": "remove",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Remove unconsumed speak"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "result - cancellation result true=Cancellation success false=Broadcast content not found or broadcast consumed"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 188,
+									"character": 1,
+									"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L188"
+								}
+							],
+							"parameters": [
+								{
+									"id": 40,
+									"name": "effectKey",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "key of effect"
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "symbol"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				},
+				{
+					"id": 45,
+					"name": "resume",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 214,
+							"character": 8,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L214"
+						}
+					],
+					"signatures": [
+						{
+							"id": 46,
+							"name": "resume",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Resume all broadcasts and immediately cancel those being broadcast"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 214,
+									"character": 1,
+									"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L214"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 32,
+					"name": "speak",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 148,
+							"character": 8,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L148"
+						}
+					],
+					"signatures": [
+						{
+							"id": 33,
+							"name": "speak",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "speak"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "result - effectKey: symbol"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 148,
+									"character": 1,
+									"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L148"
+								}
+							],
+							"parameters": [
+								{
+									"id": 34,
+									"name": "content",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "speak text"
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 35,
+									"name": "utterOptions",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "utter options: UtterOptions"
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Partial"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": {
+													"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.es5.d.ts",
+													"qualifiedName": "Pick"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+															"qualifiedName": "SpeechSynthesisUtterance"
+														},
+														"name": "SpeechSynthesisUtterance",
+														"package": "typescript"
+													},
+													{
+														"type": "union",
+														"types": [
+															{
+																"type": "literal",
+																"value": "text"
+															},
+															{
+																"type": "literal",
+																"value": "lang"
+															},
+															{
+																"type": "literal",
+																"value": "onerror"
+															},
+															{
+																"type": "literal",
+																"value": "onpause"
+															},
+															{
+																"type": "literal",
+																"value": "onboundary"
+															},
+															{
+																"type": "literal",
+																"value": "onend"
+															},
+															{
+																"type": "literal",
+																"value": "onmark"
+															},
+															{
+																"type": "literal",
+																"value": "onresume"
+															},
+															{
+																"type": "literal",
+																"value": "onstart"
+															},
+															{
+																"type": "literal",
+																"value": "pitch"
+															},
+															{
+																"type": "literal",
+																"value": "rate"
+															},
+															{
+																"type": "literal",
+																"value": "voice"
+															},
+															{
+																"type": "literal",
+																"value": "volume"
+															}
+														]
+													}
+												],
+												"name": "Pick",
+												"package": "typescript"
+											}
+										],
+										"name": "Partial",
+										"package": "typescript"
+									},
+									"defaultValue": "{}"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "symbol"
+							}
+						}
+					]
+				},
+				{
+					"id": 36,
+					"name": "speaking",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 164,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L164"
+						}
+					],
+					"signatures": [
+						{
+							"id": 37,
+							"name": "speaking",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "do speaking"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 164,
+									"character": 1,
+									"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L164"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						17
+					]
+				},
+				{
+					"title": "Properties",
+					"children": [
+						21,
+						25,
+						24,
+						20,
+						22,
+						23
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						41,
+						30,
+						28,
+						26,
+						43,
+						38,
+						45,
+						32,
+						36
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 44,
+					"character": 6,
+					"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L44"
+				}
+			]
+		},
+		{
+			"id": 12,
+			"name": "Effect",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 14,
+					"name": "content",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 40,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L40"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 13,
+					"name": "key",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 39,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L39"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "symbol"
+					}
+				},
+				{
+					"id": 15,
+					"name": "utterOptions",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 41,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L41"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.es5.d.ts",
+							"qualifiedName": "Partial"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Pick"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "SpeechSynthesisUtterance"
+										},
+										"name": "SpeechSynthesisUtterance",
+										"package": "typescript"
+									},
+									{
+										"type": "union",
+										"types": [
+											{
+												"type": "literal",
+												"value": "text"
+											},
+											{
+												"type": "literal",
+												"value": "lang"
+											},
+											{
+												"type": "literal",
+												"value": "onerror"
+											},
+											{
+												"type": "literal",
+												"value": "onpause"
+											},
+											{
+												"type": "literal",
+												"value": "onboundary"
+											},
+											{
+												"type": "literal",
+												"value": "onend"
+											},
+											{
+												"type": "literal",
+												"value": "onmark"
+											},
+											{
+												"type": "literal",
+												"value": "onresume"
+											},
+											{
+												"type": "literal",
+												"value": "onstart"
+											},
+											{
+												"type": "literal",
+												"value": "pitch"
+											},
+											{
+												"type": "literal",
+												"value": "rate"
+											},
+											{
+												"type": "literal",
+												"value": "voice"
+											},
+											{
+												"type": "literal",
+												"value": "volume"
+											}
+										]
+									}
+								],
+								"name": "Pick",
+								"package": "typescript"
+							}
+						],
+						"name": "Partial",
+						"package": "typescript"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						14,
+						13,
+						15
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 38,
+					"character": 17,
+					"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L38"
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "SpeechOptions",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 7,
+					"name": "lang",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 13,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L13"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 8,
+					"name": "pitch",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 14,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L14"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 2,
+					"name": "preferTouchEvent",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 11,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L11"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 9,
+					"name": "rate",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 15,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L15"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 3,
+					"name": "voiceFilter",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 12,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L12"
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": null
+							},
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 4,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "index.ts",
+											"line": 12,
+											"character": 15,
+											"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L12"
+										}
+									],
+									"signatures": [
+										{
+											"id": 5,
+											"name": "__type",
+											"variant": "signature",
+											"kind": 4096,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "index.ts",
+													"line": 12,
+													"character": 15,
+													"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L12"
+												}
+											],
+											"parameters": [
+												{
+													"id": 6,
+													"name": "voice",
+													"variant": "param",
+													"kind": 32768,
+													"flags": {},
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+															"qualifiedName": "SpeechSynthesisVoice"
+														},
+														"name": "SpeechSynthesisVoice",
+														"package": "typescript"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				},
+				{
+					"id": 10,
+					"name": "volume",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 16,
+							"character": 1,
+							"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L16"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						7,
+						8,
+						2,
+						9,
+						3,
+						10
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 10,
+					"character": 17,
+					"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L10"
+				}
+			]
+		},
+		{
+			"id": 11,
+			"name": "UtterOptions",
+			"variant": "declaration",
+			"kind": 4194304,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 19,
+					"character": 12,
+					"url": "https://github.com/saqqdy/grace-speak/blob/dbd08d9/src/index.ts#L19"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.es5.d.ts",
+					"qualifiedName": "Partial"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.es5.d.ts",
+							"qualifiedName": "Pick"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+									"qualifiedName": "SpeechSynthesisUtterance"
+								},
+								"name": "SpeechSynthesisUtterance",
+								"package": "typescript"
+							},
+							{
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": "lang"
+									},
+									{
+										"type": "literal",
+										"value": "onboundary"
+									},
+									{
+										"type": "literal",
+										"value": "onend"
+									},
+									{
+										"type": "literal",
+										"value": "onerror"
+									},
+									{
+										"type": "literal",
+										"value": "onmark"
+									},
+									{
+										"type": "literal",
+										"value": "onpause"
+									},
+									{
+										"type": "literal",
+										"value": "onresume"
+									},
+									{
+										"type": "literal",
+										"value": "onstart"
+									},
+									{
+										"type": "literal",
+										"value": "pitch"
+									},
+									{
+										"type": "literal",
+										"value": "rate"
+									},
+									{
+										"type": "literal",
+										"value": "text"
+									},
+									{
+										"type": "literal",
+										"value": "voice"
+									},
+									{
+										"type": "literal",
+										"value": "volume"
+									}
+								]
+							}
+						],
+						"name": "Pick",
+						"package": "typescript"
+					}
+				],
+				"name": "Partial",
+				"package": "typescript"
+			}
+		}
+	],
+	"groups": [
+		{
+			"title": "Classes",
+			"children": [
+				16
+			]
+		},
+		{
+			"title": "Interfaces",
+			"children": [
+				12,
+				1
+			]
+		},
+		{
+			"title": "Type Aliases",
+			"children": [
+				11
+			]
+		}
+	],
+	"packageName": "grace-speak",
+	"packageVersion": "2.1.0",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "<div style=\"text-align: center;\" align=\"center\">\n\n# grace-speak\n\nA composition api for SpeechSynthesis\n\n[![NPM version][npm-image]][npm-url]\n[![Codacy Badge][codacy-image]][codacy-url]\n[![Test coverage][codecov-image]][codecov-url]\n[![npm download][download-image]][download-url]\n[![License][license-image]][license-url]\n\n[![Sonar][sonar-image]][sonar-url]\n\n</div>\n\n<div style=\"text-align: center; margin-bottom: 20px;\" align=\"center\">\n\n### **[Documentation](https://www.saqqdy.com/grace-speak)** • **[Change Log](./CHANGELOG.md)**\n\n</div>\n\n## Installing\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\n# use pnpm\n$ pnpm install grace-speak\n\n# use npm\n$ npm install grace-speak --save\n\n# use yarn\n$ yarn add grace-speak\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n## Usage\n\n1. Simple use:\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport Speaker from 'grace-speak'\n\nconst speaker = new Speaker()\n\nspeaker.speak('very good')\nspeaker.speak('powered by saqqdy<https://github.com/saqqdy>')\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n2. Using unpkg CDN:\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```html\n<!-- grace-speak < v2.0.0 -->\n<!-- for modern browser -->\n<script src=\"https://unpkg.com/grace-speak@1.1.0/dist/index.min.js\"></script>\n<!-- for ie11 and blow -->\n<script src=\"https://unpkg.com/grace-speak@1.1.0/dist/es5/index.min.js\"></script>\n\n<!-- grace-speak >= v2.0.0 -->\n<script src=\"https://unpkg.com/grace-speak@2.0.0/dist/index.global.prod.js\"></script>\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n## Support & Issues\n\nPlease open an issue [here](https://github.com/saqqdy/grace-speak/issues).\n\n## License\n\n[MIT](LICENSE)\n\n[npm-image]: https://img.shields.io/npm/v/grace-speak.svg?style=flat-square\n[npm-url]: https://npmjs.org/package/grace-speak\n[codacy-image]: https://app.codacy.com/project/badge/Grade/f70d4880e4ad4f40aa970eb9ee9d0696\n[codacy-url]: https://www.codacy.com/gh/saqqdy/grace-speak/dashboard?utm_source=github.com&utm_medium=referral&utm_content=saqqdy/grace-speak&utm_campaign=Badge_Grade\n[codecov-image]: https://img.shields.io/codecov/c/github/saqqdy/grace-speak.svg?style=flat-square\n[codecov-url]: https://codecov.io/github/saqqdy/grace-speak?branch=master\n[download-image]: https://img.shields.io/npm/dm/grace-speak.svg?style=flat-square\n[download-url]: https://npmjs.org/package/grace-speak\n[license-image]: https://img.shields.io/badge/License-MIT-blue.svg\n[license-url]: LICENSE\n[sonar-image]: https://sonarcloud.io/api/project_badges/quality_gate?project=saqqdy_grace-speak\n[sonar-url]: https://sonarcloud.io/dashboard?id=saqqdy_grace-speak"
+		}
+	],
+	"symbolIdMap": {
+		"0": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"1": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "SpeechOptions"
+		},
+		"2": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "SpeechOptions.preferTouchEvent"
+		},
+		"3": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "SpeechOptions.voiceFilter"
+		},
+		"4": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "__type"
+		},
+		"5": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "__type"
+		},
+		"6": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "voice"
+		},
+		"7": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "SpeechOptions.lang"
+		},
+		"8": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "SpeechOptions.pitch"
+		},
+		"9": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "SpeechOptions.rate"
+		},
+		"10": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "SpeechOptions.volume"
+		},
+		"11": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "UtterOptions"
+		},
+		"12": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Effect"
+		},
+		"13": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Effect.key"
+		},
+		"14": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Effect.content"
+		},
+		"15": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Effect.utterOptions"
+		},
+		"16": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker"
+		},
+		"17": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.__constructor"
+		},
+		"18": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker"
+		},
+		"19": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "options"
+		},
+		"20": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.speech"
+		},
+		"21": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.effects"
+		},
+		"22": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.utter"
+		},
+		"23": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.voice"
+		},
+		"24": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.ready"
+		},
+		"25": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.options"
+		},
+		"26": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.init"
+		},
+		"27": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.init"
+		},
+		"28": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.getVoice"
+		},
+		"29": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.getVoice"
+		},
+		"30": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.getCurrentUtter"
+		},
+		"31": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.getCurrentUtter"
+		},
+		"32": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.speak"
+		},
+		"33": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.speak"
+		},
+		"34": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "content"
+		},
+		"35": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "utterOptions"
+		},
+		"36": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.speaking"
+		},
+		"37": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.speaking"
+		},
+		"38": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.remove"
+		},
+		"39": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.remove"
+		},
+		"40": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "effectKey"
+		},
+		"41": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.cancel"
+		},
+		"42": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.cancel"
+		},
+		"43": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.pause"
+		},
+		"44": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.pause"
+		},
+		"45": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.resume"
+		},
+		"46": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Speaker.resume"
+		}
+	}
+}
