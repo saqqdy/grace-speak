@@ -1,3 +1,3 @@
-export const inBrowser = typeof window !== 'undefined'
+import { inBrowser } from 'js-cool'
 
 export const isChrome = inBrowser && navigator.userAgent.includes('Chrome')

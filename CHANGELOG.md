@@ -1,5 +1,10 @@
 # Change logs
 
+## 2023.06.06 v2.1.0
+
+1. fix init bug
+2. upgrade all package version
+
 ## 2023.05.25 v2.0.1
 
 1. drop extend method

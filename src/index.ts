@@ -1,4 +1,5 @@
-import { inBrowser, isChrome } from './utils'
+import { inBrowser } from 'js-cool'
+import { isChrome } from './utils'
 
 declare global {
 	interface Window {
@@ -81,14 +82,15 @@ class Speaker {
 			return Promise.resolve(true)
 		}
 
-		return new Promise((resolve, reject) => {
+		return new Promise(resolve => {
 			const handler = () => {
 				this.speech.speak(new SpeechSynthesisUtterance(''))
 				this.ready = window.graceSpeakReady = this.speech.speaking || this.speech.pending
-				window.removeEventListener('click', handler)
-				window.removeEventListener('keypress', handler)
-				if (this.ready) resolve(true)
-				else reject(new Error('init error'))
+				if (this.ready) {
+					window.removeEventListener('click', handler)
+					window.removeEventListener('keypress', handler)
+					resolve(true)
+				}
 			}
 			window.addEventListener('click', handler)
 			window.addEventListener('keypress', handler)
