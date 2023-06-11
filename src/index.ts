@@ -7,7 +7,7 @@ declare global {
 	}
 }
 
-export interface SpeechOptions {
+export interface SpeakOptions {
 	preferTouchEvent: boolean
 	voiceFilter: ((voice: SpeechSynthesisVoice) => boolean) | null
 	lang: 'zh-CN' | string
@@ -35,7 +35,7 @@ export type UtterOptions = Partial<
 	>
 >
 
-export interface Effect {
+export interface SpeakEffect {
 	key: symbol
 	content: string
 	utterOptions: UtterOptions
@@ -43,11 +43,11 @@ export interface Effect {
 
 class Speaker {
 	speech: SpeechSynthesis = window.speechSynthesis
-	effects: Effect[] = []
+	effects: SpeakEffect[] = []
 	utter: SpeechSynthesisUtterance | null = null
 	voice: SpeechSynthesisVoice | undefined = undefined
 	ready: boolean = window.graceSpeakReady ?? false
-	options: SpeechOptions = {
+	options: SpeakOptions = {
 		preferTouchEvent: false,
 		voiceFilter: null,
 		lang: 'zh-CN',
@@ -56,14 +56,14 @@ class Speaker {
 		volume: 1
 	}
 
-	constructor(options: Partial<SpeechOptions> = {}) {
+	constructor(options: Partial<SpeakOptions> = {}) {
 		if (!inBrowser) return
 		if (typeof window.speechSynthesis === 'undefined') {
 			console.error('speechSynthesis is not supported')
 			return
 		}
 
-		this.options = Object.assign(this.options, options) as unknown as SpeechOptions
+		this.options = Object.assign(this.options, options || {})
 
 		const promises = []
 		!this.ready && promises.push(this.init())
@@ -83,16 +83,17 @@ class Speaker {
 		}
 
 		return new Promise(resolve => {
+			const eventName = this.options.preferTouchEvent ? 'touchend' : 'click'
 			const handler = () => {
 				this.speech.speak(new SpeechSynthesisUtterance(''))
 				this.ready = window.graceSpeakReady = this.speech.speaking || this.speech.pending
 				if (this.ready) {
-					window.removeEventListener('click', handler)
+					window.removeEventListener(eventName, handler)
 					window.removeEventListener('keypress', handler)
 					resolve(true)
 				}
 			}
-			window.addEventListener('click', handler)
+			window.addEventListener(eventName, handler)
 			window.addEventListener('keypress', handler)
 		})
 	}
@@ -145,7 +146,7 @@ class Speaker {
 	 * @param utterOptions - utter options: UtterOptions
 	 * @returns result - effectKey: symbol
 	 */
-	public speak(content: string, utterOptions: UtterOptions = {}): Effect['key'] {
+	public speak(content: string, utterOptions: UtterOptions = {}): SpeakEffect['key'] {
 		const effect = {
 			key: Symbol('SpeechKey#effect'),
 			content,
@@ -185,7 +186,7 @@ class Speaker {
 	 * @param effectKey - key of effect
 	 * @returns result - cancellation result true=Cancellation success false=Broadcast content not found or broadcast consumed
 	 */
-	public remove(effectKey: Effect['key']): boolean {
+	public remove(effectKey: SpeakEffect['key']): boolean {
 		const index = this.effects.findIndex(({ key }) => key === effectKey)
 		if (index > -1) {
 			this.effects.splice(index, 1)

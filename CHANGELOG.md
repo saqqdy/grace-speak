@@ -1,5 +1,9 @@
 # Change logs
 
+## 2023.06.11 v2.1.1
+
+1. fix `options.preferTouchEvent`
+
 ## 2023.06.06 v2.1.0
 
 1. fix init bug

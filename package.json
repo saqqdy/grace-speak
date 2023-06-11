@@ -1,7 +1,7 @@
 {
 	"name": "grace-speak",
 	"description": "A composition api for SpeechSynthesis",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"packageManager": "pnpm@8.6.1",
 	"main": "dist/index.cjs.js",
 	"module": "dist/index.esm-bundler.js",
