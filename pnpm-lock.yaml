@@ -54,7 +54,7 @@ devDependencies:
     version: 5.2.0
   core-js:
     specifier: ^3.30.2
-    version: 3.30.2
+    version: 3.32.2
   coveralls:
     specifier: ^3.1.1
     version: 3.1.1
@@ -72,7 +72,7 @@ devDependencies:
     version: 29.5.0(@types/node@20.2.5)
   load-yml:
     specifier: ^1.3.0
-    version: 1.3.0(core-js@3.30.2)
+    version: 1.3.0(core-js@3.32.2)
   npm-run-all:
     specifier: ^4.1.5
     version: 4.1.5
@@ -87,7 +87,7 @@ devDependencies:
     version: 3.0.0(debug@4.3.4)(js-cool@5.4.0)
   rm-all:
     specifier: ^1.0.0
-    version: 1.0.0(core-js@3.30.2)
+    version: 1.0.0(core-js@3.32.2)
   rollup:
     specifier: ^3.23.1
     version: 3.23.1
@@ -99,7 +99,7 @@ devDependencies:
     version: 10.0.0
   rollup-plugin-inject-code:
     specifier: ^1.1.0
-    version: 1.1.0(core-js@3.30.2)(rollup@3.23.1)(terser@5.17.4)
+    version: 1.1.0(core-js@3.32.2)(rollup@3.23.1)(terser@5.17.4)
   rollup-plugin-visualizer:
     specifier: ^5.9.0
     version: 5.9.0(rollup@3.23.1)
@@ -1970,13 +1970,13 @@ packages:
       find-up: 5.0.0
     dev: true
 
-  /@node-kit/pnpm-workspace-info@2.5.1(core-js@3.30.2):
+  /@node-kit/pnpm-workspace-info@2.5.1(core-js@3.32.2):
     resolution: {integrity: sha512-uJfJgNvHNt+fZJW/GeEONDN5SIIYR7DGB3GSzYzvYq6NMW46B/pjDmIHokeaI80VyLzwiJvV/K4RgF9IOe5cXA==}
     dependencies:
       '@node-kit/extra.path': 2.5.1
       '@node-kit/pnpm-workspace-root': 2.5.1
       fast-glob: 3.2.12
-      load-yml: 1.3.0(core-js@3.30.2)
+      load-yml: 1.3.0(core-js@3.32.2)
     transitivePeerDependencies:
       - core-js
     dev: true
@@ -3273,8 +3273,8 @@ packages:
       browserslist: 4.21.5
     dev: true
 
-  /core-js@3.30.2:
-    resolution: {integrity: sha512-uBJiDmwqsbJCWHAwjrx3cvjbMXP7xD72Dmsn5LOJpiRmE3WbBbN5rCqQ2Qh6Ek6/eOrjlWngEynBWo4VxerQhg==}
+  /core-js@3.32.2:
+    resolution: {integrity: sha512-pxXSw1mYZPDGvTQqEc5vgIb83jGQKFGYWY76z4a7weZXUolw3G+OvpZqSRcfYOoOVUQJYEPsWeQK8pKEnUtWxQ==}
     requiresBuild: true
     dev: true
 
@@ -5551,7 +5551,7 @@ packages:
       skip-regex: 1.0.2
     dev: true
 
-  /js-cool@2.8.0(core-js@3.30.2):
+  /js-cool@2.8.0(core-js@3.32.2):
     resolution: {integrity: sha512-k2oWpZfYgqXaciJaG/aAKg2PoNyiZ37SeO0t6yVtlolY50Lwv8WnqmSekSAHTrXvxtLzN4VNj8eGhQi9lG6abQ==}
     peerDependencies:
       core-js: '>=3.0.0'
@@ -5560,16 +5560,16 @@ packages:
       tslib:
         optional: true
     dependencies:
-      core-js: 3.30.2
+      core-js: 3.32.2
     dev: true
 
-  /js-cool@4.6.0(core-js@3.30.2):
+  /js-cool@4.6.0(core-js@3.32.2):
     resolution: {integrity: sha512-pQgLj0OK0uUKGih2GK3tw652KMGuh7vtOAmuDfJwKKdcHYx/gBPWM7zZnLv8frv/tDWtlzCRV7rRZkxYqE+Xhw==}
     engines: {node: '>=12.20'}
     peerDependencies:
       core-js: '>= 3'
     dependencies:
-      core-js: 3.30.2
+      core-js: 3.32.2
       load-source: 1.2.0
       mount-css: 1.2.0
       mount-image: 1.2.0
@@ -5766,7 +5766,7 @@ packages:
       mount-script: 1.2.0
       mount-style: 1.2.0
 
-  /load-yml@1.3.0(core-js@3.30.2):
+  /load-yml@1.3.0(core-js@3.32.2):
     resolution: {integrity: sha512-LkbCmVZULVsMADpXe3WIvM8GfsTDDbbnItNaEJIhoJeyab359GyQ5dM4esqyE+XH60Yo8xB5N2SeEk174RY6Rg==}
     engines: {node: '>=12.20'}
     peerDependencies:
@@ -5776,7 +5776,7 @@ packages:
         optional: true
     dependencies:
       '@types/js-yaml': 4.0.5
-      core-js: 3.30.2
+      core-js: 3.32.2
       js-yaml: 4.1.0
     dev: true
 
@@ -6629,10 +6629,10 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pm-info@2.5.1(core-js@3.30.2):
+  /pm-info@2.5.1(core-js@3.32.2):
     resolution: {integrity: sha512-cCK0S13Pk3z6vG1G0XyoqWPVg6SLEi7LnNRVlDep+JM50bsUD49rtEmhcCWKqTEEJD0QHYNlWNpb4W4s+Vi2tA==}
     dependencies:
-      load-yml: 1.3.0(core-js@3.30.2)
+      load-yml: 1.3.0(core-js@3.32.2)
     transitivePeerDependencies:
       - core-js
     dev: true
@@ -6857,15 +6857,15 @@ packages:
       '@node-kit/extra.fs': 2.5.1
       commander: 10.0.1
       consola: 3.1.0
-      core-js: 3.30.2
+      core-js: 3.32.2
       cosmiconfig: 8.1.3
       debug: 4.3.4
       global-modules: 2.0.0
       js-cool: 5.4.0
       monorepo-root: 2.5.1
       ora: 6.3.0
-      what-pm: 2.5.1(core-js@3.30.2)
-      workspace-projects: 2.5.1(core-js@3.30.2)
+      what-pm: 2.5.1(core-js@3.32.2)
+      workspace-projects: 2.5.1(core-js@3.32.2)
     dev: true
 
   /request@2.88.2:
@@ -6972,7 +6972,7 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rm-all@1.0.0(core-js@3.30.2):
+  /rm-all@1.0.0(core-js@3.32.2):
     resolution: {integrity: sha512-no+Lt1FH9EMV2vXz5qUMB9n9JnyUn1QQsaTk4aT2Gkw13HufCGbecTIsDcUy+n7NnuZbmQbPlerpIcXU3R0hlg==}
     engines: {node: '>=12.20'}
     hasBin: true
@@ -6983,8 +6983,8 @@ packages:
       chalk: 4.1.2
       commander: 10.0.1
       consola: 2.15.3
-      core-js: 3.30.2
-      js-cool: 2.8.0(core-js@3.30.2)
+      core-js: 3.32.2
+      js-cool: 2.8.0(core-js@3.32.2)
     transitivePeerDependencies:
       - tslib
     dev: true
@@ -7017,13 +7017,13 @@ packages:
       - supports-color
     dev: true
 
-  /rollup-plugin-inject-code@1.1.0(core-js@3.30.2)(rollup@3.23.1)(terser@5.17.4):
+  /rollup-plugin-inject-code@1.1.0(core-js@3.32.2)(rollup@3.23.1)(terser@5.17.4):
     resolution: {integrity: sha512-QrYTxdnfCFHmPIZIaGTp8TeDGrVzbe4fIf0YYoE4wVJh5dv+SSfJTABYsG1GJ/oM7/O4wFBa5F2tInGCCWG4Ow==}
     peerDependencies:
       rollup: '>=2.0.0 || >=3.22.0'
       terser: '>=3'
     dependencies:
-      js-cool: 4.6.0(core-js@3.30.2)
+      js-cool: 4.6.0(core-js@3.32.2)
       rollup: 3.23.1
       terser: 5.17.4
     transitivePeerDependencies:
@@ -7912,11 +7912,11 @@ packages:
     hasBin: true
     dev: true
 
-  /what-pm@2.5.1(core-js@3.30.2):
+  /what-pm@2.5.1(core-js@3.32.2):
     resolution: {integrity: sha512-5CLrxTyIKk3o2Tshv1BMAe84NjJbucr/uio8fX4Jr838/enF/aQEpAUWLcj5WSbA3dOJWWsoySLQPCK2SPCeSA==}
     dependencies:
       find-up: 5.0.0
-      pm-info: 2.5.1(core-js@3.30.2)
+      pm-info: 2.5.1(core-js@3.32.2)
       workspace-root: 2.5.1
     transitivePeerDependencies:
       - core-js
@@ -7989,11 +7989,11 @@ packages:
     resolution: {integrity: sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==}
     dev: true
 
-  /workspace-projects@2.5.1(core-js@3.30.2):
+  /workspace-projects@2.5.1(core-js@3.32.2):
     resolution: {integrity: sha512-bUnx92d1MrnukbK+bK4NZ04+4VMC9jCOfvkB4D67KwzvxVmaBCh0zul0jQ6eghxGxMibxEtdIVQwYQuF0pSu3Q==}
     dependencies:
       '@node-kit/lerna-workspace-info': 2.5.1
-      '@node-kit/pnpm-workspace-info': 2.5.1(core-js@3.30.2)
+      '@node-kit/pnpm-workspace-info': 2.5.1(core-js@3.32.2)
       '@node-kit/yarn-workspace-info': 2.5.1
     transitivePeerDependencies:
       - core-js
